@@ -109,8 +109,7 @@ else:
         col_inputs, col_options = st.columns(2)
         
         with col_inputs:
-                   with col_inputs:
-        situation = st.text_area(
+            situation = st.text_area(
                 "Décrivez la situation en quelques mots bruts :", 
                 placeholder="Ex: Mon client me doit 1200$ depuis un mois. Il ne répond plus à mes appels alors que le travail est livré."
             )
@@ -118,7 +117,6 @@ else:
                 "Détails clés (Optionnel) :", 
                 placeholder="Ex: Facture N°2026-04, projet fini le 12 avril."
             )
-
             
         with col_options:
             type_conflit = st.selectbox("Type de message", [
@@ -150,7 +148,7 @@ else:
                     prompt_systeme = """Tu es un expert mondial en communication de crise, négociation commerciale et psychologie d'entreprise.
                     Ton but est d'écrire des e-mails parfaits pour résoudre des conflits, obtenir des paiements ou fixer des limites strictes, sans jamais paraître agressif mais en restant redoutablement efficace.
                     
-                    Tu dois fournir deux choses dans ta réponse :
+                    Tu devez fournir deux choses dans votre réponse :
                     1. **Objet :** Un titre d'e-mail clair, percutant et professionnel.
                     2. **Corps de l'e-mail :** Le message complet avec des crochets [comme ceci] pour les éléments que l'utilisateur doit remplacer (ex: [Votre Nom], [Date]).
                     
@@ -175,10 +173,8 @@ else:
                     email_genere = reponse.choices[0].message.content
                     st.success("✨ Votre e-mail ultra-professionnel est prêt !")
                     
-                    # Affichage clair du résultat
                     st.markdown(email_genere)
                     
-                    # Zone pour copier-coller facilement
                     st.text_area("Copier le texte brut :", value=email_genere, height=300)
 
                 except Exception as e:
