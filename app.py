@@ -110,7 +110,7 @@ else:
         
         with col_inputs:
                    with col_inputs:
-            situation = st.text_area(
+        situation = st.text_area(
                 "Décrivez la situation en quelques mots bruts :", 
                 placeholder="Ex: Mon client me doit 1200$ depuis un mois. Il ne répond plus à mes appels alors que le travail est livré."
             )
