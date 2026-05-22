@@ -109,14 +109,16 @@ else:
         col_inputs, col_options = st.columns(2)
         
         with col_inputs:
+                   with col_inputs:
             situation = st.text_area(
                 "Décrivez la situation en quelques mots bruts :", 
                 placeholder="Ex: Mon client me doit 1200$ depuis un mois. Il ne répond plus à mes appels alors que le travail est livré."
             )
-             details_importants = st.text_input(
-                 "Détails clés (Optionnel) :", 
-                 placeholder="Ex: Facture N°2026-04, projet fini le 12 avril."
-             )
+            details_importants = st.text_input(
+                "Détails clés (Optionnel) :", 
+                placeholder="Ex: Facture N°2026-04, projet fini le 12 avril."
+            )
+
             
         with col_options:
             type_conflit = st.selectbox("Type de message", [
